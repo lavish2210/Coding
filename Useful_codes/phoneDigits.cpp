@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 #define pii pair<int, int>
 #define fori(s,n) for(int i=s;i<n;i++)
@@ -11,33 +10,17 @@
 #define takeinputarray(arr,n) fori(0,n){cin>>arr[i];}
 #define printarray(arr,n) fori(0,n){cout<<arr[i]<<' ';}cout<<endl;
 #define takeinputvector(v,n) fori(0,n){int x;cin>>x;v.push_back(x);}
-#define printvector(v) forvi(v){cout<<val(i);}
+#define printvector(v) forvi(v){cout<<val(i)<' ';}
 
 using namespace std;
 
-int subsetSum(int arr[], int i, int n, int rs)
-{
-    if (i == n)
-    {
-        return rs == 0;
-    }
-    return subsetSum(arr, i + 1, n, rs) + subsetSum(arr, i + 1, n, rs - arr[i]);
-}
-
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int n;
-    cin >> n;
-    int arr[n];
-    takeinputarray(arr, n);
-    // printarray(arr,n);
-    int rs;
-    cin >> rs;
-    cout << subsetSum(arr, 0, n, rs);
-
-    cout << endl;
-    return 0;
+void phoneDigits(int x){
+    if (x<= 7)
+        cout<<(char)(x* 3 + 91);
+    cout<<(char)(x* 3 + 92);
+    cout<<(char)(x* 3 + 93);
+    if (x>= 7)
+        cout<<(char)(x* 3 + 94);
+    if (x== 9)
+        cout<<(char)(x* 3 + 95);
 }
